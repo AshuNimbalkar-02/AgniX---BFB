@@ -18,12 +18,4 @@
 *   **Libraries:** Lucide-React (Icons), Framer Motion (Animations), jsPDF (PDF Export)
 *   **APIs:** Geolocation API, Web Speech API, Open-Meteo API
 
-## 4. Judging Evaluation Points
-1.  **Practicality:** The tool solves a real-world problem for millions of farmers.
-2.  **Accessibility:** Multilingual and voice support ensures that literacy or language is not a barrier.
-3.  **Data Integrity:** Uses verified NPK ranges for accurate decision intelligence.
-4.  **UI/UX:** Professional, clean, and modern interface designed for ease of use.
 
----
-**Author:** CSMSS Agriculture Lab  
-**Date:** April 2026
