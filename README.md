@@ -1,6 +1,6 @@
 # 🌾 AgniX: Agricultural Decision Intelligence System
 
-**AgniX** is a high-performance, data-driven decision support system designed to empower farmers in the **Chhatrapati Sambhajinagar** region (and beyond) with scientific crop recommendations, real-time market data, and government policy integration.
+**AgniX** is a high-performance, data-driven decision support system designed to empower farmers in **Maharashtra** with scientific crop recommendations, real-time market data, and government policy integration.
 
 ![Version](https://img.shields.io/badge/version-2.1.0-green)
 ![Tech Stack](https://img.shields.io/badge/stack-React%20%7C%20Vite%20%7C%20Framer%20Motion-blue)
@@ -27,25 +27,24 @@
 
 ### 4. 🗺️ 6-Level Farming Roadmaps
 - **Step-by-Step Guidance**: Every crop comes with a scientific roadmap from soil preparation to harvest.
-- **Taluka-Specific Logic**: Hyper-local advice for talukas like Sillod (Maize/Ginger), Paithan (Sugarcane/Mosambi), and Vaijapur (Pomegranate).
+- **Hyper-Local Logic**: Specialized advice for talukas in Chh. Sambhajinagar, Pune, Nashik, Nagpur, and more.
 
 ### 5. 🎙️ Accessibility & UI/UX
 - **Voice-UI**: Integrated voice recognition for hands-free location and weather detection.
 - **Speech Synthesis**: Recommendations can be read aloud in English, Hindi, or Marathi.
-- **Premium Aesthetics**: Dark/Light mode compatible, glassmorphism UI, and smooth Framer Motion animations.
+- **Premium Aesthetics**: Glassmorphism UI with smooth Framer Motion animations.
 - **PDF Reports**: One-click generation of professional PDF intelligence reports for farmers.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React.js 18 (Hooks, Functional Components)
-- **Bundler**: Vite (Ultra-fast HMR)
-- **Styling**: Vanilla CSS3 (Custom Design System)
-- **Animations**: Framer Motion
+- **Frontend**: React.js 18 (Vite)
+- **Backend**: Node.js (Express)
+- **Data/AI**: Python (Jupyter Notebooks)
+- **Styling**: Vanilla CSS3
 - **Icons**: Lucide React
 - **PDF Generation**: jsPDF
-- **External APIs**: Open-Meteo (Weather), Geolocation API
 
 ---
 
@@ -80,7 +79,6 @@ AGNIX/
 2. **Backend**:
    ```bash
    cd backend
-   npm install (if required)
    node server.js
    ```
 
