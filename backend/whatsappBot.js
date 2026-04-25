@@ -1,5 +1,6 @@
-const { Client, LocalAuth } = require('whatsapp-web.js');
-const qrcode = require('qrcode-terminal');
+import pkg from 'whatsapp-web.js';
+const { Client, LocalAuth } = pkg;
+import qrcode from 'qrcode-terminal';
 
 const sessions = {};
 
@@ -81,4 +82,4 @@ const startWhatsAppBot = () => {
     client.initialize();
 };
 
-module.exports = startWhatsAppBot;
+export default startWhatsAppBot;
