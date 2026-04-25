@@ -475,31 +475,66 @@ function App() {
     }
   };
 
-  const getRecommendations = () => {
-    // High-Precision AI Scoring Model (Vector Distance Inference)
-    const scoredCrops = cropData.map(crop => {
-      let score = 1000; // Starting baseline score
+  const getRecommendations = async () => {
+    let aiRecommendation = null;
+    let engineUsed = "Weighted Scoring";
 
-      // 1. NPK Euclidean Distance (Penalty-based scoring)
+    // 1. Try to get prediction from the Real Random Forest AI Backend
+    try {
+      const response = await fetch('http://localhost:8000/predict', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          n: parseFloat(inputs.n),
+          p: parseFloat(inputs.p),
+          k: parseFloat(inputs.k),
+          temperature: parseFloat(inputs.temp),
+          humidity: 80, // Default humidity for the model
+          ph: 6.5,      // Default pH for the model
+          rainfall: parseFloat(inputs.rainfall)
+        })
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        if (data.recommended_crop) {
+          // Find the full crop metadata for the predicted label
+          const match = cropData.find(c => c.name.en === data.recommended_crop);
+          if (match) {
+            aiRecommendation = { ...match, modelScore: 1000, confidence: data.confidence };
+            engineUsed = "Random Forest AI Model";
+          }
+        }
+      }
+    } catch (err) {
+      console.warn("AI Backend not reached. Falling back to local engine.");
+    }
+
+    if (aiRecommendation) {
+      setRecommendations([aiRecommendation]);
+      setShowResult(true);
+      const speechText = lang === 'en' ? `Our AI Model suggests ${aiRecommendation.name.en} with ${aiRecommendation.confidence} confidence.` : 
+                        lang === 'hi' ? `हमारा एआई मॉडल ${aiRecommendation.name.hi} की सलाह देता है।` : 
+                        `आमच्या एआई मॉडेलनुसार ${aiRecommendation.name.mr} ची शिफारस आहे.`;
+      speak(speechText);
+      return;
+    }
+
+    // 2. Fallback: High-Precision Local Scoring Model
+    const scoredCrops = cropData.map(crop => {
+      let score = 1000;
       const nIdeal = (crop.npkRange.n[0] + crop.npkRange.n[1]) / 2;
       const pIdeal = (crop.npkRange.p[0] + crop.npkRange.p[1]) / 2;
       const kIdeal = (crop.npkRange.k[0] + crop.npkRange.k[1]) / 2;
-      
       const nDist = Math.abs(inputs.n - nIdeal);
       const pDist = Math.abs(inputs.p - pIdeal);
       const kDist = Math.abs(inputs.k - kIdeal);
       score -= (nDist * 2 + pDist * 3 + kDist * 2);
-
-      // 2. Weather Vector Matching
       const tempIdeal = (crop.tempRange[0] + crop.tempRange[1]) / 2;
       score -= (Math.abs(inputs.temp - tempIdeal) * 15);
-
-      // 3. Categorical Matching (Soil & Season)
       if (!crop.suitableSoil.includes(inputs.soilType)) score -= 300;
       if (crop.season !== inputs.season && crop.season !== "Annual") score -= 300;
       if (!crop.region.includes(inputs.region)) score -= 200;
-
-      // 4. Geospatial Expertise (Regional Boosting)
       if (inputs.district === "Chh. Sambhajinagar") {
         const priorityCrops = {
           "Sillod": ["Maize (Corn)", "Ginger"],
@@ -509,11 +544,9 @@ function App() {
         };
         if (priorityCrops[inputs.taluka]?.includes(crop.name.en)) score += 250;
       }
-
       return { ...crop, modelScore: score };
     });
 
-    // Filtering by AI Confidence Threshold (Correct Output only)
     const topMatches = scoredCrops
       .filter(c => c.modelScore > 350)
       .sort((a, b) => b.modelScore - a.modelScore)
@@ -531,9 +564,9 @@ function App() {
     setShowResult(true);
 
     const names = topMatches.map(c => c.name[lang]).join(', ');
-    const speechText = lang === 'en' ? `Our AI model suggests ${names}.` : 
-                      lang === 'hi' ? `हमारा एआई मॉडल ${names} की सलाह देता है।` : 
-                      `आमच्या एआई मॉडेलनुसार ${names} ची शिफारस आहे.`;
+    const speechText = lang === 'en' ? `Our local engine suggests ${names}.` : 
+                      lang === 'hi' ? `हमारा सिस्टम ${names} की सलाह देता है।` : 
+                      `आमच्या सिस्टीमनुसार ${names} ची शिफारस आहे.`;
     speak(speechText);
   };
 
@@ -552,16 +585,88 @@ function App() {
 
   const generatePDF = () => {
     const doc = new jsPDF();
-    doc.setFontSize(22);
-    doc.text("Farmer Crop Intelligence Report", 20, 20);
+    const pageWidth = doc.internal.pageSize.getWidth();
+    
+    // Header Branding
+    doc.setFillColor(22, 101, 52); // Dark Green
+    doc.rect(0, 0, pageWidth, 40, 'F');
+    
+    // Add Logo (As data URL or reference)
+    // Note: In a real app we'd convert logo.png to base64. 
+    // Here we'll use a placeholder or assume it's loaded.
+    doc.setTextColor(255, 255, 255);
+    doc.setFontSize(24);
+    doc.setFont("helvetica", "bold");
+    doc.text("AgniX Intelligence Report", 20, 25);
+    
+    doc.setFontSize(10);
+    doc.text(`Date: ${new Date().toLocaleDateString()} | Location: ${inputs.district}, ${inputs.taluka}`, 20, 34);
+
+    // Section 1: Soil & Weather Summary
+    doc.setTextColor(0, 0, 0);
+    doc.setFontSize(14);
+    doc.text("1. Input Parameters Summary", 20, 55);
+    doc.setLineWidth(0.5);
+    doc.line(20, 57, 80, 57);
+    
+    doc.setFontSize(10);
+    doc.setFont("helvetica", "normal");
+    doc.text(`Soil N-P-K: ${inputs.n}-${inputs.p}-${inputs.k}`, 25, 65);
+    doc.text(`Soil Type: ${inputs.soilType}`, 25, 71);
+    doc.text(`Temperature: ${inputs.temp}°C`, 90, 65);
+    doc.text(`Rainfall: ${inputs.rainfall}mm`, 90, 71);
+    doc.text(`Market: ${inputs.apmc} APMC`, 140, 65);
+    doc.text(`Season: ${inputs.season}`, 140, 71);
+
+    // Section 2: AI Recommendations
+    doc.setFontSize(14);
+    doc.setFont("helvetica", "bold");
+    doc.text("2. Top Recommended Crops", 20, 85);
+    doc.line(20, 87, 80, 87);
+
+    let currentY = 95;
     recommendations.forEach((crop, index) => {
-      const y = 40 + (index * 80);
-      doc.setFontSize(16);
-      doc.text(`${index + 1}. ${crop.name[lang]}`, 20, y);
+      // Crop Card in PDF
+      doc.setFillColor(248, 250, 252);
+      doc.rect(20, currentY, pageWidth - 40, 45, 'F');
+      doc.setDrawColor(226, 232, 240);
+      doc.rect(20, currentY, pageWidth - 40, 45, 'S');
+
+      doc.setTextColor(22, 101, 52);
+      doc.setFontSize(12);
+      doc.setFont("helvetica", "bold");
+      doc.text(`${index + 1}. ${crop.name.en}`, 25, currentY + 10);
+      
+      doc.setTextColor(100, 116, 139);
+      doc.setFontSize(9);
+      doc.setFont("helvetica", "normal");
+      doc.text(`Expected Market Price: ₹${getLivePrice(crop.prices.avg, inputs.apmc)} / Quintal`, 25, currentY + 18);
+      
+      doc.setTextColor(0, 0, 0);
       doc.setFontSize(10);
-      doc.text(`Why: ${crop.why[lang]}`, 20, y + 10, { maxWidth: 170 });
+      const splitWhy = doc.splitTextToSize(`Insight: ${crop.why.en}`, pageWidth - 50);
+      doc.text(splitWhy, 25, currentY + 28);
+      
+      currentY += 52;
+      
+      // Page break if needed
+      if (currentY > 250) {
+        doc.addPage();
+        currentY = 20;
+      }
     });
-    doc.save(`Crop_Report.pdf`);
+
+    // Footer
+    const totalPages = doc.internal.getNumberOfPages();
+    for (let i = 1; i <= totalPages; i++) {
+      doc.setPage(i);
+      doc.setFontSize(8);
+      doc.setTextColor(150, 150, 150);
+      doc.text("AgniX Agricultural Decision Intelligence System | BFB Hackathon 2024", pageWidth / 2, 285, { align: "center" });
+      doc.text(`Page ${i} of ${totalPages}`, pageWidth - 20, 285, { align: "right" });
+    }
+
+    doc.save(`AgniX_Report_${inputs.taluka}.pdf`);
   };
 
   return (
