@@ -1,4 +1,4 @@
-export const distList = ["Chh. Sambhajinagar", "Pune", "Nashik", "Nagpur", "Akola", "Amravati", "Ahilyanagar"];
+export const distList = ["Chh. Sambhajinagar", "Pune", "Nashik", "Nagpur", "Akola", "Amravati", "Ahilyanagar", "Other"];
 
 export const talukaList = {
   "Chh. Sambhajinagar": [
@@ -11,7 +11,8 @@ export const talukaList = {
   "Nagpur": ["Nagpur Urban", "Katol", "Saoner", "Kalmeshwar", "Ramtek"],
   "Akola": ["Akola", "Balapur", "Patur", "Murtizapur", "Telhara", "Barshitakli"],
   "Amravati": ["Achalpur", "Chandur Railway", "Morshi", "Warud", "Daryapur", "Anjangaon Surji"],
-  "Ahilyanagar": ["Nevasa", "Pathardi", "Kopargaon", "Sangamner", "Rahuri"]
+  "Ahilyanagar": ["Nevasa", "Pathardi", "Kopargaon", "Sangamner", "Rahuri"],
+  "Other": []
 };
 
 export const regionsList = [

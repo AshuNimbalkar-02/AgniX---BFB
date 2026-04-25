@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { translations } from './locales/translations';
 import { generatePDF } from './utils/pdfGenerator';
 import { speakText, startVoiceRecognition } from './utils/voiceUtils';
+import { regionsList, distList, talukaList } from './constants/locations';
 
 import Header from './components/Header';
 import InputForm from './components/InputForm';
@@ -34,6 +35,7 @@ function App() {
 
   const getLocLabel = (val) => {
     if (val === "Maharashtra") return t.maharashtra;
+    if (val === "Other") return t.other;
     if (val === "Chh. Sambhajinagar") return t.sambhajinagar;
     if (val === "Chh. Sambhajinagar Urban") return t.urban;
     if (val === "Chh. Sambhajinagar Rural") return t.rural;
@@ -58,27 +60,132 @@ function App() {
 
   const fetchWeather = async (lat, lon) => {
     setIsAutoLoading(true);
+    const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY;
+
     try {
-      const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
-      const data = await response.json();
-      if (data.current_weather) {
-        setInputs(prev => ({
-          ...prev,
-          temp: Math.round(data.current_weather.temperature)
-        }));
+      if (apiKey) {
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`);
+        const data = await response.json();
+        if (data.main) {
+          setInputs(prev => ({
+            ...prev,
+            temp: Math.round(data.main.temp),
+            humidity: Math.round(data.main.humidity),
+            rainfall: data.rain ? Math.round(data.rain['1h'] || data.rain['3h'] || 0) : prev.rainfall
+          }));
+        }
+      } else {
+        const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,precipitation`);
+        const data = await response.json();
+        if (data.current) {
+          setInputs(prev => ({
+            ...prev,
+            temp: Math.round(data.current.temperature_2m),
+            humidity: Math.round(data.current.relative_humidity_2m),
+            rainfall: data.current.precipitation > 0 ? Math.round(data.current.precipitation * 100) : prev.rainfall
+          }));
+        }
       }
     } catch (err) {
-      console.error(err);
+      console.error("Weather fetch error:", err);
+      alert("Weather detection failed. Using default values.");
     } finally {
       setIsAutoLoading(false);
     }
   };
 
+  const detectWeather = async () => {
+    if (inputs.district && inputs.taluka && inputs.district !== "Other") {
+      setIsAutoLoading(true);
+      try {
+        const query = `${inputs.taluka}, ${inputs.district}, Maharashtra, India`;
+        const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`);
+        const data = await response.json();
+        if (data && data.length > 0) {
+          const { lat, lon } = data[0];
+          await fetchWeather(lat, lon);
+          return;
+        }
+      } catch (err) {
+        console.error("Geocoding error:", err);
+      } finally {
+        setIsAutoLoading(false);
+      }
+    }
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (pos) => fetchWeather(pos.coords.latitude, pos.coords.longitude),
+        () => alert(t.locError)
+      );
+    }
+  };
+
+  const fetchLocationInfo = async (lat, lon) => {
+    try {
+      const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&addressdetails=1`);
+      const data = await response.json();
+      if (data.address) {
+        const addr = data.address;
+        
+        let dName = addr.city || addr.district || addr.county || addr.state_district || addr.region || '';
+        let tName = addr.suburb || addr.town || addr.village || addr.city_district || addr.municipality || '';
+
+        const aliases = {
+           "aurangabad": "Chh. Sambhajinagar",
+           "ahmednagar": "Ahilyanagar",
+           "poona": "Pune"
+        };
+        
+        const dLower = dName.toLowerCase();
+        for (const [key, val] of Object.entries(aliases)) {
+          if (dLower.includes(key)) {
+            dName = val;
+            break;
+          }
+        }
+
+        const matchedDist = distList.find(d => 
+          dName.toLowerCase().includes(d.toLowerCase()) || 
+          d.toLowerCase().includes(dName.toLowerCase())
+        );
+
+        if (matchedDist && matchedDist !== "Other") {
+          setInputs(prev => ({
+            ...prev,
+            region: 'Maharashtra',
+            district: matchedDist
+          }));
+
+          const matchedTaluka = talukaList[matchedDist]?.find(t => 
+             tName.toLowerCase().includes(t.toLowerCase()) || 
+             t.toLowerCase().includes(tName.toLowerCase())
+          );
+
+          if (matchedTaluka) {
+            setInputs(prev => ({ ...prev, taluka: matchedTaluka }));
+          }
+        } else {
+           setInputs(prev => ({
+             ...prev,
+             region: addr.state || 'Other',
+             district: 'Other',
+             taluka: tName || dName || 'Unknown'
+           }));
+        }
+      }
+    } catch (err) {
+      console.error("Location detection error:", err);
+      alert(t.locError);
+    }
+  };
+
   const detectLocation = () => {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((pos) => {
-        fetchWeather(pos.coords.latitude, pos.coords.longitude);
-      });
+      navigator.geolocation.getCurrentPosition(
+        (pos) => fetchLocationInfo(pos.coords.latitude, pos.coords.longitude),
+        () => alert(t.locError)
+      );
     }
   };
 
@@ -146,6 +253,7 @@ function App() {
           handleInput={handleInput}
           isAutoLoading={isAutoLoading}
           detectLocation={detectLocation}
+          detectWeather={detectWeather}
           getLocLabel={getLocLabel}
         />
 
