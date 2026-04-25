@@ -85,4 +85,4 @@ const startWhatsAppBot = () => {
     client.initialize();
 };
 
-module.exports = startWhatsAppBot;
+export default startWhatsAppBot;
