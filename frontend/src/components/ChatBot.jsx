@@ -50,8 +50,12 @@ const ChatBot = ({ t, lang }) => {
           speakText(data.text, lang);
         }
       } else {
-        const errorText = data.details || data.error || "Sorry, I'm having trouble connecting.";
-        setMessages(prev => [...prev, { id: Date.now(), text: errorText, sender: 'bot' }]);
+        const errorText = data.details || data.error;
+        const displayError = errorText.includes('invalid') || errorText.includes('Not Found') 
+          ? "तुमची API Key चुकीची आहे. कृपया .env फाईलमध्ये योग्य Key टाका. (Your API Key is invalid.)"
+          : "सर्व्हरशी संपर्क होऊ शकला नाही. (Service currently unavailable)";
+          
+        setMessages(prev => [...prev, { id: Date.now(), text: displayError, sender: 'bot' }]);
       }
     } catch (error) {
       console.error(error);

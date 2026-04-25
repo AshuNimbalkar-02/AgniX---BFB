@@ -1,12 +1,16 @@
-const { Client, LocalAuth } = require('whatsapp-web.js');
-const qrcode = require('qrcode-terminal');
-const { extractDataWithLLM } = require('./services/dataExtractor');
+import pkg from 'whatsapp-web.js';
+const { Client, LocalAuth } = pkg;
+import qrcode from 'qrcode-terminal';
+import { extractDataWithLLM } from './services/dataExtractor.js';
 
 const sessions = {};
 
 const startWhatsAppBot = () => {
     const client = new Client({
-        authStrategy: new LocalAuth({ clientId: "agnix" })
+        authStrategy: new LocalAuth({ clientId: "agnix" }),
+        puppeteer: {
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
+        }
     });
 
     client.on('qr', (qr) => {
