@@ -102,9 +102,4 @@ The system utilizes a **Trained Machine Learning Model** logic for high-precisio
     - **Geospatial Prioritization**: Neural-like weighting for Maharashtra districts.
     - **Weather API Integration**: Real-time inference using direct inputs from the Open-Meteo API.
 
----
 
-## 📜 License
-This project is developed for the **BFB Hackathon / Agri-Tech Innovation**.
-
-Created with ❤️ for the Farmers of India.
