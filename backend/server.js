@@ -24,7 +24,16 @@ app.post('/api/recommend', (req, res) => {
   }
 });
 
-app.listen(3000, () => {
+const server = app.listen(3000, () => {
     console.log('Server running on port 3000');
     startWhatsAppBot();
+});
+
+// Attempt graceful shutdown for node --watch
+process.on('SIGTERM', () => {
+    console.log('SIGTERM signal received: closing HTTP server');
+    server.close(() => {
+        console.log('HTTP server closed');
+        process.exit(0);
+    });
 });

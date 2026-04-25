@@ -6,7 +6,7 @@ const sessions = {};
 
 const startWhatsAppBot = () => {
     const client = new Client({
-        authStrategy: new LocalAuth()
+        authStrategy: new LocalAuth({ clientId: "agnix" })
     });
 
     client.on('qr', (qr) => {
