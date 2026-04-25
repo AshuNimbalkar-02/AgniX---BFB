@@ -2,7 +2,7 @@ import React from 'react';
 import { Leaf, Wind, MapPin, Navigation } from 'lucide-react';
 import { regionsList, distList, talukaList } from '../constants/locations';
 
-const InputForm = ({ t, inputs, handleInput, isAutoLoading, detectLocation, getLocLabel }) => {
+const InputForm = ({ t, inputs, handleInput, isAutoLoading, detectLocation, detectWeather, getLocLabel }) => {
   return (
     <div className="form-grid">
       <section className="clean-card">
@@ -27,17 +27,21 @@ const InputForm = ({ t, inputs, handleInput, isAutoLoading, detectLocation, getL
       <section className="clean-card">
         <h3 className="section-title"><Wind size={24} /> {t.weather}</h3>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          <div className="input-field"><label>{t.temp}</label><input type="number" name="temp" value={inputs.temp} onChange={handleInput} /></div>
-          <div className="input-field"><label>{t.rainfall}</label><input type="number" name="rainfall" value={inputs.rainfall} onChange={handleInput} /></div>
-          <button className="btn btn-secondary" onClick={detectLocation} style={{ marginTop: '1rem' }}>
-            <Navigation size={18} /> {isAutoLoading ? t.fetching : t.detectLoc}
+          <button className="btn btn-secondary" onClick={detectWeather} style={{ marginBottom: '0.5rem' }}>
+            <Navigation size={18} /> {isAutoLoading ? t.fetching : t.detectWeather}
           </button>
+          <div className="input-field"><label>{t.temp}</label><input type="number" name="temp" value={inputs.temp} onChange={handleInput} /></div>
+          <div className="input-field"><label>{t.humidity}</label><input type="number" name="humidity" value={inputs.humidity} onChange={handleInput} /></div>
+          <div className="input-field"><label>{t.rainfall}</label><input type="number" name="rainfall" value={inputs.rainfall} onChange={handleInput} /></div>
         </div>
       </section>
 
       <section className="clean-card">
         <h3 className="section-title"><MapPin size={24} /> {t.market}</h3>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <button className="btn btn-secondary" onClick={detectLocation} style={{ marginBottom: '0.5rem' }}>
+            <Navigation size={18} /> {isAutoLoading ? t.fetching : t.detectLoc}
+          </button>
           <div className="input-field">
             <label>{t.region}</label>
             <select name="region" value={inputs.region} onChange={handleInput}>

@@ -28,7 +28,9 @@ export const translations = {
     waterPH: "Water pH (Acidity)",
     marketHub: "Nearest Market",
     region: "Region",
-    detectLoc: "Auto Detect Weather",
+    detectLoc: "Auto Detect Location",
+    detectWeather: "Auto Detect Weather",
+    humidity: "Humidity (%)",
     voiceAssist: "Voice Assist",
     fetching: "Fetching...",
     locError: "Location Error",
@@ -80,7 +82,8 @@ export const translations = {
     veryHigh: "Very High",
     exorbitant: "Exorbitant",
     stable: "Stable",
-    variable: "Variable"
+    variable: "Variable",
+    other: "Other"
   },
   hi: {
     title: "फसल चयन सहायक",
@@ -110,7 +113,9 @@ export const translations = {
     alluvialSoil: "दोमट मिट्टी",
     loamySoil: "महीन मिट्टी (Loamy)",
     sandySoil: "रेतीली मिट्टी",
-    detectLoc: "मौसम का पता लगाएं",
+    detectLoc: "स्थान का पता लगाएं",
+    detectWeather: "मौसम का पता लगाएं",
+    humidity: "आर्द्रता (%)",
     voiceAssist: "आवाज सहायक",
     fetching: "प्राप्त कर रहा है...",
     locError: "स्थान त्रुटि",
@@ -158,7 +163,8 @@ export const translations = {
     veryHigh: "बहुत उच्च",
     exorbitant: "अत्यधिक",
     stable: "स्थिर",
-    variable: "परिवर्तनशील"
+    variable: "परिवर्तनशील",
+    other: "अन्य"
   },
   mr: {
     title: "पीक निवड सहाय्यक",
@@ -188,8 +194,10 @@ export const translations = {
     alluvialSoil: "गाळाची माती",
     loamySoil: "लोमी माती",
     sandySoil: "रेताड माती",
-    detectLoc: "हवामान ओळखा",
-    voiceAssist: "आवाज सहाय्यक",
+    detectLoc: "स्थान ओळखा",
+    detectWeather: "हवामान ओळखा",
+    humidity: "आर्द्रता (%)",
+    voiceAssist: "आवाज सहायक",
     fetching: "मिळवत आहे...",
     locError: "स्थान त्रुटी",
     level: "पातळी",
@@ -239,6 +247,7 @@ export const translations = {
     veryHigh: "खूप जास्त",
     exorbitant: "भरपूर",
     stable: "स्थिर",
-    variable: "बदलते"
+    variable: "बदलते",
+    other: "इतर"
   }
 };
