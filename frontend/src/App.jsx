@@ -167,6 +167,12 @@ const translations = {
     akola: "अकोला",
     amravati: "अमरावती",
     ahilyanagar: "अहिल्यानगर",
+    haveli: "हवेली", maval: "मावळ", junnar: "जुन्नर", baramati: "बारामती", shirur: "शिरूर", indapur: "इंदापूर",
+    niphad: "निफाड", malegaon: "मालेगाव", yeola: "येवला", sinnar: "सिन्नर", chandwad: "चांदवड",
+    katol: "काटोल", saoner: "सावनेर", kalmeshwar: "कलमेश्वर", ramtek: "रामटेक",
+    balapur: "बाळापूर", patur: "पातूर", murtizapur: "मूर्तिजापूर", telhara: "तेल्हारा", barshitakli: "बार्शिटाकळी",
+    achalpur: "अचलपूर", "chandur railway": "चांदूर रेल्वे", morshi: "मोर्शी", warud: "वरूड", daryapur: "दर्यापूर", "anjangaon surji": "अंजनगाव सुर्जी",
+    nevasa: "नेवासा", pathardi: "पाथर्डी", kopargaon: "कोपरगाव", sangamner: "संगमनेर", rahuri: "राहुरी",
     difficulty: "कठिनाई",
     profit: "लाभ",
     avgValue: "औसत बाजार मूल्य",
@@ -252,6 +258,12 @@ const translations = {
     akola: "अकोला",
     amravati: "अमरावती",
     ahilyanagar: "अहिल्यानगर",
+    haveli: "हवेली", maval: "मावळ", junnar: "जुन्नर", baramati: "बारामती", shirur: "शिरूर", indapur: "इंदापूर",
+    niphad: "निफाड", malegaon: "मालेगाव", yeola: "येवला", sinnar: "सिन्नर", chandwad: "चांदवड",
+    katol: "काटोल", saoner: "सावनेर", kalmeshwar: "कलमेश्वर", ramtek: "रामटेक",
+    balapur: "बाळापूर", patur: "पातूर", murtizapur: "मूर्तिजापूर", telhara: "तेल्हारा", barshitakli: "बार्शिटाकळी",
+    achalpur: "अचलपूर", "chandur railway": "चांदूर रेल्वे", morshi: "मोर्शी", warud: "वरूड", daryapur: "दर्यापूर", "anjangaon surji": "अंजनगाव सुर्जी",
+    nevasa: "नेवासा", pathardi: "पाथर्डी", kopargaon: "कोपरगाव", sangamner: "संगमनेर", rahuri: "राहुरी",
     difficulty: "कठिणता",
     profit: "नफा",
     avgValue: "सरासरी बाजार भाव",
@@ -672,7 +684,7 @@ function App() {
                       onChange={(e) => setInputs({...inputs, apmc: e.target.value})}
                     >
                       {talukaList[inputs.district]?.map(tName => (
-                        <option key={tName} value={tName}>{getLocLabel(tName)} APMC</option>
+                        <option key={tName} value={tName}>{getLocLabel(tName)} {lang === 'mr' ? 'बाजार समिती' : lang === 'hi' ? 'बाजार समिति' : 'APMC'}</option>
                       ))}
                     </select>
                   </div>
