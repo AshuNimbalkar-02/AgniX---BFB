@@ -83,7 +83,11 @@ export const translations = {
     exorbitant: "Exorbitant",
     stable: "Stable",
     variable: "Variable",
-    other: "Other"
+    other: "Other",
+    chatTitle: "AgniX Assistant",
+    chatPlaceholder: "Ask me anything...",
+    chatWelcome: "नमस्कार! मी तुमचा AgniX सहाय्यक आहे. आज मी तुम्हाला कशी मदत करू शकतो?",
+    listening: "Listening..."
   },
   hi: {
     title: "फसल चयन सहायक",
@@ -164,7 +168,11 @@ export const translations = {
     exorbitant: "अत्यधिक",
     stable: "स्थिर",
     variable: "परिवर्तनशील",
-    other: "अन्य"
+    other: "अन्य",
+    chatTitle: "AgniX सहायक",
+    chatPlaceholder: "मुझसे कुछ भी पूछें...",
+    chatWelcome: "नमस्ते! मैं आपका AgniX सहायक हूँ। आज मैं आपकी क्या मदद कर सकता हूँ?",
+    listening: "सुन रहा हूँ..."
   },
   mr: {
     title: "पीक निवड सहाय्यक",
@@ -248,6 +256,10 @@ export const translations = {
     exorbitant: "भरपूर",
     stable: "स्थिर",
     variable: "बदलते",
-    other: "इतर"
+    other: "इतर",
+    chatTitle: "AgniX सहाय्यक",
+    chatPlaceholder: "मला काहीही विचारा...",
+    chatWelcome: "नमस्कार! मी तुमचा AgniX सहाय्यक आहे. आज मी तुम्हाला कशी मदत करू शकतो?",
+    listening: "ऐकत आहे..."
   }
 };
