@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import { predictCrops } from '../ai_ml/predictor.js';
+import startWhatsAppBot from './whatsappBot.js';
 
 const app = express();
 app.use(cors());
@@ -23,4 +24,7 @@ app.post('/api/recommend', (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log('Server running on port 3000'));
+app.listen(3000, () => {
+    console.log('Server running on port 3000');
+    startWhatsAppBot();
+});
