@@ -1,0 +1,234 @@
+District,Taluka,Major Crop,Season,Soil Type,Soil pH,Water Requirement (mm),Rainfall (mm),Temperature (°C),Humidity (%),Sowing Time,Harvest Time,Irrigation,Yield (kg/ha)
+Ahilyanagar,Rahuri,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,50-60,Nov,Mar,Canal,3000
+Ahilyanagar,Rahuri,Sugarcane,Annual,Black,6.5-7.5,1500-2500,600-900,20-35,60-80,Jan-Feb,12-18 Months,Drip,80000
+Ahilyanagar,Sangamner,Onion,Rabi,Loamy,7-Jun,350-550,500-700,13-25,60-70,Nov,Mar,Sprinkler,20000
+Ahilyanagar,Sangamner,Bajra,Kharif,Sandy Loam,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1100
+Ahilyanagar,Shrirampur,Sugarcane,Annual,Black,6.5-7.5,1800-2500,700-1000,20-35,60-80,Feb,12-18 Months,Drip,85000
+Ahilyanagar,Shrirampur,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,50-60,Nov,Mar,Canal,3200
+Ahilyanagar,Nevasa,Cotton,Kharif,Black,6.5-8,700-1200,500-800,22-35,50-70,Jun,Oct,Rainfed,1600
+Ahilyanagar,Nevasa,Jowar,Rabi,Black,8-Jun,400-600,400-700,20-30,40-60,Oct,Feb,Rainfed,1400
+Ahilyanagar,Pathardi,Bajra,Kharif,Sandy,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1000
+Ahilyanagar,Pathardi,Gram (Chana),Rabi,Black,6-7.5,300-500,400-700,20-30,40-60,Oct-Nov,Feb-Mar,Rainfed,1200
+Ahilyanagar,Kopargaon,Sugarcane,Annual,Black,6.5-7.5,1500-2500,600-900,20-35,60-80,Jan,12-18 Months,Drip,80000
+Ahilyanagar,Kopargaon,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,50-60,Nov,Mar,Canal,3000
+Akola,Akola,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1700
+Akola,Akola,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1400
+Akola,Balapur,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1600
+Akola,Balapur,Tur (Arhar),Kharif,Black,6-7.5,600-800,600-900,20-35,50-70,Jun,Jan,Rainfed,1200
+Akola,Patur,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1300
+Akola,Patur,Gram (Chana),Rabi,Black,6-7.5,300-500,400-700,20-30,40-60,Oct-Nov,Feb-Mar,Rainfed,1100
+Akola,Murtizapur,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1650
+Akola,Murtizapur,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,50-60,Nov,Mar,Canal,2800
+Akola,Telhara,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1350
+Akola,Telhara,Jowar,Rabi,Black,8-Jun,400-600,400-700,20-30,40-60,Oct,Feb,Rainfed,1400
+Akola,Barshitakli,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1500
+Akola,Barshitakli,Bajra,Kharif,Sandy Loam,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1100
+Amravati,Achalpur,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1700
+Amravati,Achalpur,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1400
+Amravati,Chandur Railway,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1350
+Amravati,Chandur Railway,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,50-60,Nov,Mar,Canal,2800
+Amravati,Morshi,Orange,Annual,Black,6-7.5,800-1200,800-1200,20-35,50-70,Jun,Year Round,Drip,15000
+Amravati,Morshi,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1600
+Amravati,Warud,Orange,Annual,Black,6-7.5,800-1200,800-1200,20-35,50-70,Jun,Year Round,Drip,16000
+Amravati,Warud,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1300
+Amravati,Daryapur,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1500
+Amravati,Daryapur,Tur (Arhar),Kharif,Black,6-7.5,600-800,600-900,20-35,50-70,Jun,Jan,Rainfed,1200
+Amravati,Anjangaon Surji,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1350
+Amravati,Anjangaon Surji,Gram (Chana),Rabi,Black,6-7.5,300-500,400-700,20-30,40-60,Oct-Nov,Feb-Mar,Rainfed,1100
+Beed,Georai,Bajra,Kharif,Sandy Loam,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1100
+Beed,Georai,Cotton,Kharif,Black,6.5-8,700-1200,500-800,22-35,50-70,Jun,Oct,Rainfed,1500
+Beed,Majalgaon,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1300
+Beed,Majalgaon,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,50-60,Nov,Mar,Canal,2800
+Beed,Ambajogai,Gram (Chana),Rabi,Black,6-7.5,300-500,400-700,20-30,40-60,Oct-Nov,Feb-Mar,Rainfed,1200
+Beed,Ambajogai,Jowar,Rabi,Black,8-Jun,400-600,400-700,20-30,40-60,Oct,Feb,Rainfed,1400
+Beed,Parli,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1250
+Beed,Parli,Cotton,Kharif,Black,6.5-8,700-1200,500-800,22-35,50-70,Jun,Oct,Rainfed,1500
+Beed,Ashti,Bajra,Kharif,Sandy,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1000
+Beed,Ashti,Tur (Arhar),Kharif,Black,6-7.5,600-800,500-800,20-35,50-70,Jun,Jan,Rainfed,1200
+Beed,Kaij,Cotton,Kharif,Black,6.5-8,700-1200,500-800,22-35,50-70,Jun,Oct,Rainfed,1400
+Beed,Kaij,Gram (Chana),Rabi,Black,6-7.5,300-500,400-700,20-30,40-60,Oct,Feb,Rainfed,1100
+Bhandara,Tumsar,Rice,Kharif,Clay,5-6.5,1200-1500,1000-1500,20-30,70-90,Jun,Oct,Flood,3000
+Bhandara,Tumsar,Wheat,Rabi,Clay Loam,7-Jun,450-650,500-800,15-25,50-60,Nov,Mar,Canal,2800
+Bhandara,Sakoli,Rice,Kharif,Clay,5-6.5,1200-1500,1000-1500,20-30,70-90,Jun,Oct,Flood,2900
+Bhandara,Sakoli,Gram (Chana),Rabi,Clay Loam,7-Jun,300-500,400-700,20-30,40-60,Oct-Nov,Feb-Mar,Rainfed,1100
+Bhandara,Lakhani,Rice,Kharif,Clay,5-6.5,1200-1500,1000-1500,20-30,70-90,Jun,Oct,Flood,2800
+Bhandara,Lakhani,Jowar,Rabi,Clay Loam,6-7.5,400-600,400-700,20-30,40-60,Oct,Feb,Rainfed,1300
+Bhandara,Mohadi,Rice,Kharif,Clay,5-6.5,1200-1500,1000-1500,20-30,70-90,Jun,Oct,Flood,3000
+Bhandara,Mohadi,Wheat,Rabi,Clay Loam,7-Jun,450-650,500-800,15-25,50-60,Nov,Mar,Canal,2700
+Bhandara,Bhandara,Rice,Kharif,Clay,5-6.5,1200-1500,1000-1500,20-30,70-90,Jun,Oct,Flood,3100
+Bhandara,Bhandara,Vegetable Crops,All,Loamy,7-Jun,300-600,800-1200,20-35,60-80,Year,Year,Drip,15000
+Buldhana,Khamgaon,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1600
+Buldhana,Khamgaon,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1400
+Buldhana,Malkapur,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1500
+Buldhana,Malkapur,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,50-60,Nov,Mar,Canal,2800
+Buldhana,Shegaon,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1350
+Buldhana,Shegaon,Gram (Chana),Rabi,Black,6-7.5,300-500,400-700,20-30,40-60,Oct-Nov,Feb-Mar,Rainfed,1100
+Buldhana,Chikhli,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1550
+Buldhana,Chikhli,Jowar,Rabi,Black,8-Jun,400-600,400-700,20-30,40-60,Oct,Feb,Rainfed,1400
+Buldhana,Mehkar,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1300
+Buldhana,Mehkar,Bajra,Kharif,Sandy Loam,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1100
+Buldhana,Jalgaon Jamod,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1500
+Buldhana,Jalgaon Jamod,Tur (Arhar),Kharif,Black,6-7.5,600-800,600-900,20-35,50-70,Jun,,,
+Chandrapur,Warora,Rice,Kharif,Clay,5-6.5,1200-1500,1000-1500,20-32,70-90,Jun,Oct,Flood,2800
+Chhatrapati Sambhajinagar,Paithan,Sugarcane,Annual,Black,6.5-7.5,1500-2500,600-900,20-35,60-80,Jan-Feb,12-18 Months,Drip,75000
+Chhatrapati Sambhajinagar,Paithan,Bajra,Kharif,Sandy Loam,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1100
+Chhatrapati Sambhajinagar,Vaijapur,Onion,Rabi,Loamy,7-Jun,350-550,500-700,13-25,60-70,Nov,Mar,Sprinkler,20000
+Chhatrapati Sambhajinagar,Vaijapur,Maize,Kharif,Loamy,5.5-7,500-800,600-900,18-30,50-70,Jun,Sep,Rainfed,2500
+Chhatrapati Sambhajinagar,Gangapur,Jowar,Kharif,Black,8-Jun,400-600,500-800,25-35,40-60,Jun,Oct,Rainfed,1500
+Chhatrapati Sambhajinagar,Gangapur,Gram (Chana),Rabi,Black,6-7.5,300-500,400-700,20-30,40-60,Oct-Nov,Feb-Mar,Rainfed,1200
+Chhatrapati Sambhajinagar,Kannad,Cotton,Kharif,Black,6.5-8,700-1200,600-800,22-35,50-70,Jun,Oct-Nov,Rainfed,1700
+Chhatrapati Sambhajinagar,Kannad,Bajra,Kharif,Sandy,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1000
+Chhatrapati Sambhajinagar,Sillod,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep-Oct,Rainfed,1300
+Chhatrapati Sambhajinagar,Sillod,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,40-60,Nov,Mar,Canal,2600
+Dhule,Shirpur,Cotton,Kharif,Black,8-Jun,700-1100,500-800,22-35,40-60,Jun,Oct,Rainfed,1500
+Gadchiroli,Armori,Rice,Kharif,Clay,6-May,1200-1500,1200-1600,20-30,75-90,Jun,Oct,Rainfed,2500
+Gondia,Tirora,Rice,Kharif,Clay,6-May,1200-1500,1200-1600,20-30,75-90,Jun,Oct,Flood,3000
+Hingoli,Kalamnuri,Tur (Arhar),Kharif,Black,6-7.5,600-800,600-900,20-35,50-70,Jun,Jan,Rainfed,1200
+Jalgaon,Bhusawal,Banana,Annual,Black,6-7.5,1200-2000,700-1000,20-35,60-80,Year,Year,Drip,40000
+Jalna,Bhokardan,Cotton,Kharif,Black,6.5-8,700-1200,600-800,22-35,50-70,Jun,Oct,Rainfed,1500
+Kolhapur,Karvir,Sugarcane,Annual,Black,6.5-7.5,1500-2500,1000-1500,20-35,60-80,Jan,12-18 Months,Drip,90000
+Latur,Udgir,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1300
+Mumbai City,Mumbai,Vegetables,All,Coastal,7-Jun,300-500,2000,25-35,70-90,Year,Year,Drip,15000
+Mumbai Suburban,Andheri,Vegetables,All,Coastal,7-Jun,300-500,2000,25-35,70-90,Year,Year,Drip,15000
+Nagpur,Katol,Orange,Annual,Black,6-7.5,800-1200,800-1200,20-35,50-70,Jun,Year,Drip,15000
+Nanded,Biloli,Cotton,Kharif,Black,8-Jun,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1600
+Nandurbar,Shahada,Cotton,Kharif,Black,8-Jun,700-1100,500-800,22-35,40-60,Jun,Oct,Rainfed,1500
+Nashik,Niphad,Grapes,Rabi,Loamy,6-7.5,500-700,600-800,15-30,50-70,Oct,Mar,Drip,25000
+Nashik,Niphad,Onion,Rabi,Loamy,7-Jun,350-550,500-700,13-25,60-70,Nov,Mar,Sprinkler,20000
+Nashik,Malegaon,Onion,Rabi,Loamy,7-Jun,350-550,500-700,13-25,60-70,Nov,Mar,Sprinkler,18000
+Nashik,Malegaon,Bajra,Kharif,Sandy Loam,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1100
+Nashik,Sinnar,Grapes,Rabi,Loamy,6-7.5,500-700,600-800,15-30,50-70,Oct,Mar,Drip,24000
+Nashik,Sinnar,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,50-60,Nov,Mar,Canal,3000
+Nashik,Dindori,Tomato,Rabi,Loamy,7-Jun,400-600,600-900,18-30,50-70,Oct,Feb,Drip,25000
+Nashik,Dindori,Onion,Rabi,Loamy,7-Jun,350-550,500-700,13-25,60-70,Nov,Mar,Sprinkler,19000
+Nashik,Igatpuri,Rice,Kharif,Clay,5-6.5,1200-1500,1200-2000,20-30,70-90,Jun,Oct,Rainfed,2800
+Nashik,Igatpuri,Nachni (Ragi),Kharif,Laterite,5-6.5,400-600,1200-2000,20-30,70-90,Jun,Sep,Rainfed,1500
+Nashik,Yeola,Onion,Rabi,Loamy,7-Jun,350-550,500-700,13-25,60-70,Nov,Mar,Sprinkler,20000
+Nashik,Yeola,Bajra,Kharif,Sandy,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1000
+Nashik,Niphad,Grapes,Rabi,Loamy,6-7.5,500-700,600-800,15-30,50-70,Oct,Mar,Drip,25000
+Osmanabad,Tuljapur,Jowar,Rabi,Black,8-Jun,400-600,400-700,20-30,40-60,Oct,Feb,Rainfed,1400
+Palghar,Dahanu,Chikoo,Annual,Coastal,7-Jun,800-1200,2000-3000,25-35,70-90,Year,Year,Drip,20000
+Parbhani,Parbhani,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1500
+Pune,Baramati,Sugarcane,Annual,Black,6.5-7.5,1500-2500,750-1200,20-35,60-80,Jan,12-18 Months,Drip,80000
+Raigad,Alibag,Rice,Kharif,Clay,5-6.5,1200-1500,2000-3000,20-30,80-95,Jun,Oct,Flood,3000
+Ratnagiri,Ratnagiri,Mango,Annual,Laterite,5-6.5,800-1200,2500-3500,20-30,80-95,Dec,May,Rainfed,10000
+Sangli,Miraj,Sugarcane,Annual,Black,6.5-7.5,1500-2500,800-1200,20-35,60-80,Jan,12-18 Months,Drip,85000
+Satara,Karad,Sugarcane,Annual,Black,6.5-7.5,1500-2500,800-1200,20-35,60-80,Jan,12-18 Months,Drip,85000
+Sindhudurg,Kudal,Rice,Kharif,Laterite,5-6.5,1200-1500,2500-3000,20-30,80-95,Jun,Oct,Rainfed,2800
+Solapur,Pandharpur,Jowar,Kharif,Black,8-Jun,400-600,400-700,25-35,40-60,Jun,Oct,Rainfed,1500
+Thane,Bhiwandi,Rice,Kharif,Clay,5-6.5,1200-1500,2000-3000,20-30,80-95,Jun,Oct,Flood,2800
+Wardha,Wardha,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1600
+Washim,Washim,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1300
+Yavatmal,Pusad,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1500
+Dhule,Shirpur,Cotton,Kharif,Black,8-Jun,700-1100,500-800,22-35,40-60,Jun,Oct,Rainfed,1500
+Dhule,Shirpur,Maize,Kharif,Loamy,5.5-7,500-800,600-900,18-30,50-70,Jun,Sep,Rainfed,2500
+Dhule,Sakri,Bajra,Kharif,Sandy,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1100
+Dhule,Sakri,Tur (Arhar),Kharif,Black,6-7.5,600-800,500-800,20-35,50-70,Jun,Jan,Rainfed,1200
+Dhule,Dhule,Cotton,Kharif,Black,8-Jun,700-1100,500-800,22-35,40-60,Jun,Oct,Rainfed,1600
+Dhule,Dhule,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,50-60,Nov,Mar,Canal,2800
+Dhule,Shirpur,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1400
+Dhule,Sakri,Jowar,Rabi,Black,8-Jun,400-600,400-700,20-30,40-60,Oct,Feb,Rainfed,1300
+Dhule,Dhule,Gram (Chana),Rabi,Black,6-7.5,300-500,400-700,20-30,40-60,Oct-Nov,Feb-Mar,Rainfed,1100
+Dhule,Shirpur,Bajra,Kharif,Sandy Loam,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1000
+Jalna,Bhokardan,Cotton,Kharif,Black,6.5-8,700-1200,600-800,22-35,50-70,Jun,Oct,Rainfed,1500
+Jalna,Bhokardan,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1400
+Jalna,Jalna,Cotton,Kharif,Black,6.5-8,700-1200,600-800,22-35,50-70,Jun,Oct,Rainfed,1600
+Jalna,Jalna,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,50-60,Nov,Mar,Canal,2800
+Jalna,Partur,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1300
+Jalna,Partur,Gram (Chana),Rabi,Black,6-7.5,300-500,400-700,20-30,40-60,Oct-Nov,Feb-Mar,Rainfed,1100
+Jalna,Ambad,Cotton,Kharif,Black,6.5-8,700-1200,600-800,22-35,50-70,Jun,Oct,Rainfed,1550
+Jalna,Ambad,Jowar,Rabi,Black,8-Jun,400-600,400-700,20-30,40-60,Oct,Feb,Rainfed,1400
+Jalna,Ghansawangi,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1350
+Jalna,Ghansawangi,Bajra,Kharif,Sandy Loam,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1100
+Jalna,Mantha,Cotton,Kharif,Black,6.5-8,700-1200,600-800,22-35,50-70,Jun,Oct,Rainfed,1500
+Jalna,Mantha,Tur (Arhar),Kharif,Black,6-7.5,600-800,600-900,20-35,50-70,Jun,Jan,Rainfed,1200
+Washim,Washim,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1300
+Washim,Washim,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1600
+Washim,Malegaon,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1350
+Washim,Malegaon,Gram (Chana),Rabi,Black,6-7.5,300-500,400-700,20-30,40-60,Oct-Nov,Feb-Mar,Rainfed,1100
+Washim,Mangrulpir,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1500
+Washim,Mangrulpir,Tur (Arhar),Kharif,Black,6-7.5,600-800,600-900,20-35,50-70,Jun,Jan,Rainfed,1200
+Washim,Karanja,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1300
+Washim,Karanja,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,50-60,Nov,Mar,Canal,2800
+Washim,Risod,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1550
+Washim,Risod,Jowar,Rabi,Black,8-Jun,400-600,400-700,20-30,40-60,Oct,Feb,Rainfed,1400
+Pune,Baramati,Sugarcane,Annual,Black,6.5-7.5,1500-2500,750-1200,20-35,60-80,Jan,12-18 Months,Drip,80000
+Pune,Baramati,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,50-60,Nov,Mar,Canal,3000
+Pune,Junnar,Tomato,Rabi,Loamy,7-Jun,400-600,600-800,18-30,50-70,Oct,Feb,Drip,25000
+Pune,Junnar,Onion,Rabi,Loamy,7-Jun,350-550,500-700,13-25,60-70,Nov,Mar,Sprinkler,20000
+Pune,Shirur,Bajra,Kharif,Sandy Loam,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1200
+Pune,Shirur,Cotton,Kharif,Black,6.5-8,700-1200,600-800,22-35,50-70,Jun,Oct,Rainfed,1600
+Pune,Indapur,Sugarcane,Annual,Black,6.5-7.5,1500-2500,600-900,20-35,60-80,Jan-Feb,12-18 Months,Drip,85000
+Pune,Indapur,Jowar,Rabi,Black,8-Jun,400-600,400-700,20-30,40-60,Oct,Feb,Rainfed,1400
+Pune,Mulshi,Rice,Kharif,Clay,5-6.5,1200-1500,1000-2000,20-30,70-90,Jun,Oct,Rainfed,3000
+Pune,Mulshi,Nachni (Ragi),Kharif,Laterite,5-6.5,400-600,1000-2000,20-30,70-90,Jun,Sep,Rainfed,1500
+Pune,Haveli,Vegetables,All,Loamy,7-Jun,300-600,600-900,20-35,60-80,Year,Year,Drip,20000
+Pune,Haveli,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,50-60,Nov,Mar,Canal,3200
+Thane,Bhiwandi,Rice,Kharif,Clay,5-6.5,1200-1500,2000-3000,20-30,80-95,Jun,Oct,Flood,2800
+Thane,Bhiwandi,Vegetables,All,Loamy,7-Jun,300-600,800-1200,20-35,60-80,Year,Year,Drip,18000
+Thane,Kalyan,Rice,Kharif,Clay,5-6.5,1200-1500,2000-3000,20-30,80-95,Jun,Oct,Rainfed,2700
+Thane,Kalyan,Fruits (Mango),Annual,Laterite,5-6.5,800-1200,2000-3000,20-32,70-90,Dec,May,Rainfed,10000
+Thane,Shahapur,Rice,Kharif,Clay,5-6.5,1200-1500,2500-3500,20-30,80-95,Jun,Oct,Rainfed,2900
+Thane,Shahapur,Nachni (Ragi),Kharif,Laterite,5-6.5,400-600,2000-3000,20-30,80-95,Jun,Sep,Rainfed,1400
+Thane,Murbad,Rice,Kharif,Clay,5-6.5,1200-1500,2000-3000,20-30,80-95,Jun,Oct,Rainfed,2600
+Thane,Murbad,Vegetables,All,Loamy,7-Jun,300-600,800-1200,20-35,60-80,Year,Year,Drip,17000
+Thane,Ambernath,Vegetables,All,Loamy,7-Jun,300-600,800-1200,20-35,60-80,Year,Year,Drip,16000
+Thane,Ambernath,Rice,Kharif,Clay,5-6.5,1200-1500,2000-3000,20-30,80-95,Jun,Oct,Rainfed,2500
+Solapur,Pandharpur,Jowar,Kharif,Black,8-Jun,400-600,400-700,25-35,40-60,Jun,Oct,Rainfed,1500
+Solapur,Pandharpur,Sugarcane,Annual,Black,6.5-7.5,1500-2500,600-900,20-35,60-80,Jan,12-18 Months,Drip,80000
+Solapur,Barshi,Jowar,Rabi,Black,8-Jun,400-600,400-700,20-30,40-60,Oct,Feb,Rainfed,1400
+Solapur,Barshi,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,50-60,Nov,Mar,Canal,2800
+Solapur,Akkalkot,Bajra,Kharif,Sandy,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1100
+Solapur,Akkalkot,Tur (Arhar),Kharif,Black,6-7.5,600-800,500-800,20-35,50-70,Jun,Jan,Rainfed,1200
+Solapur,Mangalvedha,Jowar,Kharif,Black,8-Jun,400-600,400-700,25-35,40-60,Jun,Oct,Rainfed,1500
+Solapur,Mangalvedha,Bajra,Kharif,Sandy Loam,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1000
+Solapur,Sangola,Jowar,Rabi,Black,8-Jun,400-600,400-700,20-30,40-60,Oct,Feb,Rainfed,1300
+Solapur,Sangola,Pomegranate,Annual,Loamy,6-7.5,500-800,400-700,20-35,40-60,Feb,Year Round,Drip,12000
+Solapur,Mohol,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,50-60,Nov,Mar,Canal,2700
+Solapur,Mohol,Sugarcane,Annual,Black,6.5-7.5,1500-2500,600-900,20-35,60-80,Jan,12-18 Months,Drip,78000
+Kolhapur,Karvir,Sugarcane,Annual,Black,6.5-7.5,1500-2500,1000-1500,20-35,60-80,Jan,12-18 Months,Drip,90000
+Kolhapur,Karvir,Rice,Kharif,Clay,5-6.5,1200-1500,1000-1500,20-30,70-90,Jun,Oct,Flood,3000
+Kolhapur,Hatkanangale,Sugarcane,Annual,Black,6.5-7.5,1500-2500,1000-1500,20-35,60-80,Jan,12-18 Months,Drip,88000
+Kolhapur,Hatkanangale,Vegetables,All,Loamy,7-Jun,300-600,800-1200,20-35,60-80,Year,Year,Drip,20000
+Kolhapur,Shirol,Sugarcane,Annual,Black,6.5-7.5,1500-2500,1000-1500,20-35,60-80,Jan,12-18 Months,Drip,92000
+Kolhapur,Shirol,Rice,Kharif,Clay,5-6.5,1200-1500,1000-1500,20-30,70-90,Jun,Oct,Flood,3100
+Kolhapur,Panhala,Rice,Kharif,Clay,5-6.5,1200-1500,1200-1800,20-30,70-90,Jun,Oct,Rainfed,2900
+Kolhapur,Panhala,Nachni (Ragi),Kharif,Laterite,5-6.5,400-600,1200-1800,20-30,70-90,Jun,Sep,Rainfed,1500
+Kolhapur,Radhanagari,Rice,Kharif,Clay,5-6.5,1200-1500,1500-2500,20-30,75-95,Jun,Oct,Rainfed,2800
+Kolhapur,Radhanagari,Turmeric,Annual,Loamy,7-Jun,1200-1500,1200-2000,20-30,70-90,Jun,Jan,Rainfed,8000
+Kolhapur,Chandgad,Rice,Kharif,Laterite,5-6.5,1200-1500,2000-3000,20-30,80-95,Jun,Oct,Rainfed,2700
+Kolhapur,Chandgad,Nachni (Ragi),Kharif,Laterite,5-6.5,400-600,2000-3000,20-30,80-95,Jun,Sep,Rainfed,1400
+Palghar,Dahanu,Chikoo (Sapota),Annual,Coastal Sandy,7-Jun,800-1200,2000-3000,25-35,70-90,Year,Year,Drip,20000
+Palghar,Dahanu,Rice,Kharif,Clay,5-6.5,1200-1500,2000-3000,20-30,80-95,Jun,Oct,Rainfed,2800
+Palghar,Talasari,Rice,Kharif,Clay,5-6.5,1200-1500,2200-3000,20-30,80-95,Jun,Oct,Rainfed,2700
+Palghar,Talasari,Nachni (Ragi),Kharif,Laterite,5-6.5,400-600,2000-3000,20-30,80-95,Jun,Sep,Rainfed,1500
+Palghar,Palghar,Vegetables,All,Loamy,7-Jun,300-600,1500-2500,20-35,60-80,Year,Year,Drip,18000
+Palghar,Palghar,Banana,Annual,Loamy,6-7.5,1200-2000,1500-2500,20-35,60-80,Year,Year,Drip,35000
+Palghar,Vasai,Vegetables,All,Coastal,7-Jun,300-600,2000-3000,25-35,70-90,Year,Year,Drip,20000
+Palghar,Vasai,Rice,Kharif,Clay,5-6.5,1200-1500,2000-3000,20-30,80-95,Jun,Oct,Rainfed,2600
+Palghar,Wada,Rice,Kharif,Clay,5-6.5,1200-1500,2000-3000,20-30,80-95,Jun,Oct,Rainfed,2700
+Palghar,Wada,Tur (Arhar),Kharif,Black,6-7.5,600-800,1500-2500,20-35,60-80,Jun,Jan,Rainfed,1200
+Yavatmal,Pusad,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1500
+Yavatmal,Pusad,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1300
+Yavatmal,Umarkhed,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1600
+Yavatmal,Umarkhed,Tur (Arhar),Kharif,Black,6-7.5,600-800,600-900,20-35,50-70,Jun,Jan,Rainfed,1200
+Yavatmal,Digras,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1350
+Yavatmal,Digras,Gram (Chana),Rabi,Black,6-7.5,300-500,400-700,20-30,40-60,Oct-Nov,Feb-Mar,Rainfed,1100
+Yavatmal,Darwha,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1550
+Yavatmal,Darwha,Jowar,Rabi,Black,8-Jun,400-600,400-700,20-30,40-60,Oct,Feb,Rainfed,1400
+Yavatmal,Wani,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1500
+Yavatmal,Wani,Soybean,Kharif,Black,6-7.5,500-700,600-900,20-30,50-70,Jun,Sep,Rainfed,1300
+Yavatmal,Ghatanji,Cotton,Kharif,Black,6.5-8,700-1200,600-900,22-35,50-70,Jun,Oct,Rainfed,1450
+Yavatmal,Ghatanji,Tur (Arhar),Kharif,Black,6-7.5,600-800,600-900,20-35,50-70,Jun,Jan,Rainfed,1200
+Sangli,Miraj,Sugarcane,Annual,Black,6.5-7.5,1500-2500,800-1200,20-35,60-80,Jan,12-18 Months,Drip,85000
+Sangli,Miraj,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,50-60,Nov,Mar,Canal,3000
+Sangli,Tasgaon,Grapes,Rabi,Loamy,6-7.5,500-700,600-800,15-30,50-70,Oct,Mar,Drip,25000
+Sangli,Tasgaon,Pomegranate,Annual,Loamy,6-7.5,500-800,400-700,20-35,40-60,Feb,Year Round,Drip,12000
+Sangli,Palus,Sugarcane,Annual,Black,6.5-7.5,1500-2500,800-1200,20-35,60-80,Jan,12-18 Months,Drip,80000
+Sangli,Palus,Jowar,Rabi,Black,8-Jun,400-600,400-700,20-30,40-60,Oct,Feb,Rainfed,1400
+Sangli,Walwa,Sugarcane,Annual,Black,6.5-7.5,1500-2500,800-1200,20-35,60-80,Jan,12-18 Months,Drip,88000
+Sangli,Walwa,Wheat,Rabi,Black,6-7.5,450-650,500-800,15-25,50-60,Nov,Mar,Canal,3100
+Sangli,Jat,Bajra,Kharif,Sandy,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1100
+Sangli,Jat,Tur (Arhar),Kharif,Black,6-7.5,600-800,400-700,20-35,50-70,Jun,Jan,Rainfed,1200
+Sangli,Kavathe Mahankal,Bajra,Kharif,Sandy Loam,6-7.5,300-500,400-700,25-40,40-60,Jun,Sep,Rainfed,1000
+Sangli,Kavathe Mahankal,Jowar,Rabi,Black,8-Jun,400-600,400-700,20-30,40-60,Oct,Feb,,

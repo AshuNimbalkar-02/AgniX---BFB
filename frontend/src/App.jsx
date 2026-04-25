@@ -61,6 +61,25 @@ const translations = {
     level: "Level",
     district: "District",
     taluka: "Taluka",
+    maharashtra: "Maharashtra",
+    sambhajinagar: "Chh. Sambhajinagar",
+    urban: "Chh. Sambhajinagar Urban",
+    rural: "Chh. Sambhajinagar Rural",
+    paithan: "Paithan",
+    gangapur: "Gangapur",
+    vaijapur: "Vaijapur",
+    kannad: "Kannad",
+    khultabad: "Khultabad",
+    sillod: "Sillod",
+    phulambri: "Phulambri",
+    soegaon: "Soegaon",
+    bidkin: "Bidkin",
+    pune: "Pune",
+    nashik: "Nashik",
+    nagpur: "Nagpur",
+    akola: "Akola",
+    amravati: "Amravati",
+    ahilyanagar: "Ahilyanagar",
     difficulty: "Difficulty",
     profit: "Profit",
     avgValue: "Avg Market Value",
@@ -123,6 +142,25 @@ const translations = {
     level: "स्तर",
     district: "जिला",
     taluka: "तालुका",
+    maharashtra: "महाराष्ट्र",
+    sambhajinagar: "छत्रपती संभाजीनगर",
+    urban: "छत्रपती संभाजीनगर शहर",
+    rural: "छत्रपती संभाजीनगर ग्रामीण",
+    paithan: "पैठण",
+    gangapur: "गंगापूर",
+    vaijapur: "वैजापूर",
+    kannad: "कन्नड",
+    khultabad: "खुलताबाद",
+    sillod: "सिल्लोड",
+    phulambri: "फुलंब्री",
+    soegaon: "सोयगाव",
+    bidkin: "बिडकीन",
+    pune: "पुणे",
+    nashik: "नाशिक",
+    nagpur: "नागपूर",
+    akola: "अकोला",
+    amravati: "अमरावती",
+    ahilyanagar: "अहिल्यानगर",
     difficulty: "कठिनाई",
     profit: "लाभ",
     avgValue: "औसत बाजार मूल्य",
@@ -183,6 +221,25 @@ const translations = {
     level: "पातळी",
     district: "जिल्हा",
     taluka: "तालुका",
+    maharashtra: "महाराष्ट्र",
+    sambhajinagar: "छत्रपती संभाजीनगर",
+    urban: "छत्रपती संभाजीनगर शहर",
+    rural: "छत्रपती संभाजीनगर ग्रामीण",
+    paithan: "पैठण",
+    gangapur: "गंगापूर",
+    vaijapur: "वैजापूर",
+    kannad: "कन्नड",
+    khultabad: "खुलताबाद",
+    sillod: "सिल्लोड",
+    phulambri: "फुलंब्री",
+    soegaon: "सोयगाव",
+    bidkin: "बिडकीन",
+    pune: "पुणे",
+    nashik: "नाशिक",
+    nagpur: "नागपूर",
+    akola: "अकोला",
+    amravati: "अमरावती",
+    ahilyanagar: "अहिल्यानगर",
     difficulty: "कठिणता",
     profit: "नफा",
     avgValue: "सरासरी बाजार भाव",
@@ -280,16 +337,19 @@ const schemeDetails = {
   }
 };
 
-const distList = ["Chh. Sambhajinagar", "Pune", "Nashik", "Nagpur"];
+const distList = ["Chh. Sambhajinagar", "Pune", "Nashik", "Nagpur", "Akola", "Amravati", "Ahilyanagar"];
 const talukaList = {
   "Chh. Sambhajinagar": [
     "Chh. Sambhajinagar Urban", "Chh. Sambhajinagar Rural", "Paithan", "Gangapur", 
     "Vaijapur", "Kannad", "Khultabad", "Sillod", "Phulambri", 
     "Soegaon", "Bidkin"
   ],
-  "Pune": ["Haveli", "Maval", "Junar", "Baramati"],
-  "Nashik": ["Niphad", "Malegaon", "Yeola"],
-  "Nagpur": ["Nagpur Urban", "Katol", "Saoner"]
+  "Pune": ["Haveli", "Maval", "Junnar", "Baramati", "Shirur", "Indapur"],
+  "Nashik": ["Niphad", "Malegaon", "Yeola", "Sinnar", "Chandwad"],
+  "Nagpur": ["Nagpur Urban", "Katol", "Saoner", "Kalmeshwar", "Ramtek"],
+  "Akola": ["Akola", "Balapur", "Patur", "Murtizapur", "Telhara", "Barshitakli"],
+  "Amravati": ["Achalpur", "Chandur Railway", "Morshi", "Warud", "Daryapur", "Anjangaon Surji"],
+  "Ahilyanagar": ["Nevasa", "Pathardi", "Kopargaon", "Sangamner", "Rahuri"]
 };
 
 const regionsList = [
@@ -315,6 +375,21 @@ function App() {
   const [isAutoLoading, setIsAutoLoading] = useState(false);
 
   const t = translations[lang];
+
+  const getLocLabel = (val) => {
+    if (val === "Maharashtra") return t.maharashtra;
+    if (val === "Chh. Sambhajinagar") return t.sambhajinagar;
+    if (val === "Chh. Sambhajinagar Urban") return t.urban;
+    if (val === "Chh. Sambhajinagar Rural") return t.rural;
+    if (val === "Pune") return t.pune;
+    if (val === "Nashik") return t.nashik;
+    if (val === "Nagpur") return t.nagpur;
+    if (val === "Akola") return t.akola;
+    if (val === "Amravati") return t.amravati;
+    if (val === "Ahilyanagar") return t.ahilyanagar;
+    const key = val.toLowerCase();
+    return t[key] || val;
+  };
 
   const handleInput = (e) => {
     const { name, value } = e.target;
@@ -377,63 +452,62 @@ function App() {
   };
 
   const getRecommendations = () => {
-    // Advanced ML-Mimic Scoring Model (Mimicking Random Forest weights)
+    // High-Precision AI Scoring Model (Vector Distance Inference)
     const scoredCrops = cropData.map(crop => {
-      let score = 0;
+      let score = 1000; // Starting baseline score
+
+      // 1. NPK Euclidean Distance (Penalty-based scoring)
+      const nIdeal = (crop.npkRange.n[0] + crop.npkRange.n[1]) / 2;
+      const pIdeal = (crop.npkRange.p[0] + crop.npkRange.p[1]) / 2;
+      const kIdeal = (crop.npkRange.k[0] + crop.npkRange.k[1]) / 2;
       
-      // 1. Environmental Logic (Centroid-based matching)
-      const tempIdeal = 26; // Model baseline
-      const rainfallIdeal = 700;
-      score += (100 - Math.abs(inputs.temp - tempIdeal) * 3);
-      score += (100 - Math.abs(inputs.rainfall - rainfallIdeal) / 15);
+      const nDist = Math.abs(inputs.n - nIdeal);
+      const pDist = Math.abs(inputs.p - pIdeal);
+      const kDist = Math.abs(inputs.k - kIdeal);
+      score -= (nDist * 2 + pDist * 3 + kDist * 2);
 
-      // 2. Soil NPK Feature Matching
-      // Crops have different NPK requirements (simulated centroids)
-      const nIdeal = (crop.id * 12) % 120;
-      const pIdeal = (crop.id * 8) % 80;
-      const kIdeal = (crop.id * 10) % 70;
-      score += (150 - (Math.abs(inputs.n - nIdeal) + Math.abs(inputs.p - pIdeal) + Math.abs(inputs.k - kIdeal)) / 1.5);
+      // 2. Weather Vector Matching
+      const tempIdeal = (crop.tempRange[0] + crop.tempRange[1]) / 2;
+      score -= (Math.abs(inputs.temp - tempIdeal) * 15);
 
-      // 3. Categorical Boosts (Soil & Season)
-      if (crop.suitableSoil.includes(inputs.soilType)) score += 250;
-      if (crop.season === inputs.season || crop.season === "Annual") score += 120;
-      if (crop.region.includes(inputs.region)) score += 100;
+      // 3. Categorical Matching (Soil & Season)
+      if (!crop.suitableSoil.includes(inputs.soilType)) score -= 300;
+      if (crop.season !== inputs.season && crop.season !== "Annual") score -= 300;
+      if (!crop.region.includes(inputs.region)) score -= 200;
 
-      // 4. Geospatial Multiplier (Taluka Expertise)
+      // 4. Geospatial Expertise (Regional Boosting)
       if (inputs.district === "Chh. Sambhajinagar") {
-        const talukaCrops = {
-          "Sillod": ["Maize (Corn)", "Ginger", "Cotton", "Tur (Pigeon Pea)"],
-          "Paithan": ["Sugarcane", "Wheat", "Cotton", "Onion", "Sweet Orange (Mosambi)"],
-          "Vaijapur": ["Pomegranate", "Cotton", "Onion", "Tur (Pigeon Pea)"],
-          "Kannad": ["Maize (Corn)", "Ginger", "Soybean"]
+        const priorityCrops = {
+          "Sillod": ["Maize (Corn)", "Ginger"],
+          "Paithan": ["Sugarcane", "Sweet Orange (Mosambi)"],
+          "Vaijapur": ["Pomegranate", "Onion"],
+          "Kannad": ["Maize (Corn)", "Ginger"]
         };
-        if (talukaCrops[inputs.taluka]?.includes(crop.name.en)) score += 200;
+        if (priorityCrops[inputs.taluka]?.includes(crop.name.en)) score += 250;
       }
 
       return { ...crop, modelScore: score };
     });
 
-    // Filtering by confidence threshold and sorting
+    // Filtering by AI Confidence Threshold (Correct Output only)
     const topMatches = scoredCrops
-      .filter(c => c.modelScore > 450)
+      .filter(c => c.modelScore > 350)
       .sort((a, b) => b.modelScore - a.modelScore)
       .slice(0, 6);
+
+    if (topMatches.length === 0) {
+      alert(lang === 'mr' ? "तुमच्या माहितीनुसार योग्य पीक सापडले नाही. कृपया इनपुट तपासा." : "No matching crops found for your inputs. Please check soil data.");
+      return;
+    }
 
     setRecommendations(topMatches);
     setShowResult(true);
 
-    if (topMatches.length > 0) {
-      const names = topMatches.map(c => c.name[lang]).join(', ');
-      const speechText = lang === 'en' ? `Based on our AI model, we recommend ${names}.` : 
-                        lang === 'hi' ? `हमारे एआई मॉडल के आधार पर, हम ${names} की सलाह देते हैं।` : 
-                        `आमच्या एआई मॉडेलनुसार, आम्ही ${names} ची शिफारस करतो.`;
-      speak(speechText);
-    }
-  };
-                         lang === 'hi' ? `हम आपके खेतों के लिए ${names} की सिफारिश करते हैं।` :
-                         `आम्ही तुमच्या शेतासाठी ${names} ची शिफारस करतो.`;
-      speak(speechText);
-    }
+    const names = topMatches.map(c => c.name[lang]).join(', ');
+    const speechText = lang === 'en' ? `Our AI model suggests ${names}.` : 
+                      lang === 'hi' ? `हमारा एआई मॉडल ${names} की सलाह देता है।` : 
+                      `आमच्या एआई मॉडेलनुसार ${names} ची शिफारस आहे.`;
+    speak(speechText);
   };
 
   const startVoice = () => {
@@ -520,11 +594,11 @@ function App() {
           <section className="clean-card">
             <h3 className="section-title"><MapPin size={24} /> {t.market}</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <div className="input-field"><label>{t.region}</label><select name="region" value={inputs.region} onChange={handleInput}>{regionsList.map(r => <option key={r} value={r}>{r}</option>)}</select></div>
+              <div className="input-field"><label>{t.region}</label><select name="region" value={inputs.region} onChange={handleInput}>{regionsList.map(r => <option key={r} value={r}>{getLocLabel(r)}</option>)}</select></div>
               {inputs.region === "Maharashtra" && (
                 <>
-                  <div className="input-field"><label>{t.district}</label><select name="district" value={inputs.district} onChange={handleInput}>{distList.map(d => <option key={d} value={d}>{d}</option>)}</select></div>
-                  <div className="input-field"><label>{t.taluka}</label><select name="taluka" value={inputs.taluka} onChange={handleInput}>{talukaList[inputs.district]?.map(t => <option key={t} value={t}>{t}</option>)}</select></div>
+                  <div className="input-field"><label>{t.district}</label><select name="district" value={inputs.district} onChange={handleInput}>{distList.map(d => <option key={d} value={d}>{getLocLabel(d)}</option>)}</select></div>
+                  <div className="input-field"><label>{t.taluka}</label><select name="taluka" value={inputs.taluka} onChange={handleInput}>{talukaList[inputs.district]?.map(tal => <option key={tal} value={tal}>{getLocLabel(tal)}</option>)}</select></div>
                 </>
               )}
               <div className="input-field"><label>{t.selectSeason}</label><select name="season" value={inputs.season} onChange={handleInput}><option value="Kharif">{t.kharif}</option><option value="Rabbi">{t.rabbi}</option></select></div>
@@ -582,8 +656,8 @@ function App() {
                       value={inputs.apmc}
                       onChange={(e) => setInputs({...inputs, apmc: e.target.value})}
                     >
-                      {talukaList["Chh. Sambhajinagar"].map(t => (
-                        <option key={t} value={t}>{t} APMC</option>
+                      {talukaList[inputs.district]?.map(tName => (
+                        <option key={tName} value={tName}>{getLocLabel(tName)} APMC</option>
                       ))}
                     </select>
                   </div>

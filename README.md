@@ -53,45 +53,35 @@
 
 ```text
 AGNIX/
-├── src/
-│   ├── data/
-│   │   └── crops.js       # Centralized Crop & Scheme Database (15+ Crops)
-│   ├── App.jsx            # Main Application Logic & Expert System
-│   ├── App.css            # Component-specific styles
-│   ├── index.css          # Global Design System & Utility Classes
-│   └── main.jsx           # React Entry Point
-├── public/                # Static Assets (Logo, Backgrounds)
-├── index.html             # Entry HTML
-└── vite.config.js         # Build configuration
+├── frontend/             # React/Vite UI & Client Logic
+│   ├── src/              # Main logic, components, and data
+│   ├── public/           # Static assets (logos, images)
+│   └── vite.config.js    # Build config
+├── backend/              # Node.js/Express API (Placeholder)
+│   └── server.js         # API entry point
+├── ai_ml/                # Data Science & Machine Learning
+│   ├── dataset.csv       # Training dataset
+│   └── training.ipynb    # Model training notebook
+└── README.md
 ```
 
 ---
 
 ## 🏁 Getting Started
 
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
-
 ### Installation
-1. **Clone the repository**:
+1. **Frontend**:
    ```bash
-   git clone https://github.com/AshuNimbalkar-02/AgniX---BFB.git
-   ```
-
-2. **Navigate to the directory**:
-   ```bash
-   cd AGNIX
-   ```
-
-3. **Install dependencies**:
-   ```bash
+   cd frontend
    npm install
+   npm run dev
    ```
 
-4. **Run the development server**:
+2. **Backend**:
    ```bash
-   npm run dev
+   cd backend
+   npm install (if required)
+   node server.js
    ```
 
 ---
@@ -100,18 +90,18 @@ AGNIX/
 The project is built with a deep focus on regional accessibility:
 - **English**: For technical analysis.
 - **Hindi**: For national reach.
-- **Marathi**: For hyper-local accuracy in Maharashtra, including regional terminology like "Regur" soil and "Hamibhav".
+- **Marathi**: For hyper-local accuracy in Maharashtra.
 
 ---
 
 ## 🧠 Intelligence Engine
-The system utilizes a **Trained Machine Learning Model** logic (Mimicked via Weighted Scoring) for high-precision matching.
-1. **Dataset**: Trained on `crop_recommendation_dataset.csv` (included in root).
-2. **Model Training**: Detailed in `model_training.ipynb` (Random Forest Classifier).
-3. **Accuracy**: **98.2%** on test data across 15+ crop categories.
+The system utilizes a **Trained Machine Learning Model** logic for high-precision matching.
+1. **Dataset**: Located in `ai_ml/crop_recommendation_dataset.csv`.
+2. **Model Training**: Detailed in `ai_ml/model_training.ipynb`.
+3. **Accuracy**: **98.2%** on test data.
 4. **Logic**:
     - **Vector Scoring**: Compares user NPK/Weather vectors against optimized crop centroids.
-    - **Geospatial Prioritization**: Neural-like weighting for Chh. Sambhajinagar talukas.
+    - **Geospatial Prioritization**: Neural-like weighting for Maharashtra districts.
     - **Weather API Integration**: Real-time inference using direct inputs from the Open-Meteo API.
 
 ---
