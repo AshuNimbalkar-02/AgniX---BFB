@@ -6,8 +6,6 @@ const Footer = () => {
       <p style={{ color: 'var(--primary)', fontWeight: '800', fontSize: '1.1rem' }}>crop Intelligence Lab</p>
       <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginTop: '0.5rem' }}>Data-driven decisions for a sustainable future.</p>
       <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center', gap: '2rem' }}>
-        <a href="#" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: '700', fontSize: '0.85rem' }}>Research Paper</a>
-        <a href="#" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: '700', fontSize: '0.85rem' }}>Methodology</a>
         <a href="#" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: '700', fontSize: '0.85rem' }}>Contact</a>
       </div>
     </footer>
