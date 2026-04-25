@@ -110,7 +110,8 @@ const translations = {
     veryHigh: "Very High",
     exorbitant: "Exorbitant",
     stable: "Stable",
-    variable: "Variable"
+    variable: "Variable",
+    schemeInfo: "Click for details"
   },
   hi: {
     title: "फसल चयन सहायक",
@@ -128,6 +129,11 @@ const translations = {
     nitrogen: "नाइट्रोजन (N)",
     phosphorus: "फास्फोरस (P)",
     potassium: "पोटेशियम (K)",
+    temp: "तापमान (°C)",
+    rainfall: "वर्षा (mm)",
+    selectSeason: "सीजन चुनें",
+    kharif: "खरीफ (मानसून)",
+    rabbi: "रबी (सर्दियों)",
     region: "क्षेत्र",
     soilType: "मिट्टी का प्रकार",
     blackSoil: "काली मिट्टी (रेगुर)",
@@ -189,7 +195,8 @@ const translations = {
     veryHigh: "बहुत उच्च",
     exorbitant: "अत्यधिक",
     stable: "स्थिर",
-    variable: "परिवर्तनशील"
+    variable: "परिवर्तनशील",
+    schemeInfo: "विवरण के लिए क्लिक करें"
   },
   mr: {
     title: "पीक निवड सहाय्यक",
@@ -207,6 +214,11 @@ const translations = {
     nitrogen: "नायट्रोजन (N)",
     phosphorus: "फॉस्फरस (P)",
     potassium: "पोटॅशियम (K)",
+    temp: "तापमान (°C)",
+    rainfall: "पाऊस (mm)",
+    selectSeason: "हंगाम निवडा",
+    kharif: "खरीप (पावसाळा)",
+    rabbi: "रब्बी (हिवाळा)",
     region: "भाग",
     soilType: "मातीचा प्रकार",
     blackSoil: "काळी माती (रेगुर)",
@@ -496,7 +508,10 @@ function App() {
       .slice(0, 6);
 
     if (topMatches.length === 0) {
-      alert(lang === 'mr' ? "तुमच्या माहितीनुसार योग्य पीक सापडले नाही. कृपया इनपुट तपासा." : "No matching crops found for your inputs. Please check soil data.");
+      const errorMsg = lang === 'mr' ? "तुमच्या माहितीनुसार योग्य पीक सापडले नाही. कृपया इनपुट तपासा." : 
+                      lang === 'hi' ? "आपके इनपुट के लिए कोई मिलान वाली फसलें नहीं मिलीं। कृपया डेटा जांचें।" : 
+                      "No matching crops found for your inputs. Please check soil data.";
+      alert(errorMsg);
       return;
     }
 
@@ -561,12 +576,12 @@ function App() {
 
       <main style={{ display: showResult ? 'none' : 'block' }}>
         <div className="form-grid">
-          <section className="clean-card">
-            <h3 className="section-title"><Leaf size={24} /> {t.soil}</h3>
+           <section className="clean-card">
+            <h3 className="section-title"><Leaf size={24} /> {t.soil || "Soil"}</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <div className="input-field"><label>{t.nitrogen}</label><input type="number" name="n" value={inputs.n} onChange={handleInput} /></div>
-              <div className="input-field"><label>{t.phosphorus}</label><input type="number" name="p" value={inputs.p} onChange={handleInput} /></div>
-              <div className="input-field"><label>{t.potassium}</label><input type="number" name="k" value={inputs.k} onChange={handleInput} /></div>
+              <div className="input-field"><label>{t.nitrogen || "Nitrogen"}</label><input type="number" name="n" value={inputs.n} onChange={handleInput} /></div>
+              <div className="input-field"><label>{t.phosphorus || "Phosphorus"}</label><input type="number" name="p" value={inputs.p} onChange={handleInput} /></div>
+              <div className="input-field"><label>{t.potassium || "Potassium"}</label><input type="number" name="k" value={inputs.k} onChange={handleInput} /></div>
               <div className="input-field">
                 <label>{t.soilType}</label>
                 <select name="soilType" value={inputs.soilType} onChange={handleInput}>
@@ -581,10 +596,10 @@ function App() {
           </section>
 
           <section className="clean-card">
-            <h3 className="section-title"><Wind size={24} /> {t.weather}</h3>
+            <h3 className="section-title"><Wind size={24} /> {t.weather || "Weather"}</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <div className="input-field"><label>{t.temp}</label><input type="number" name="temp" value={inputs.temp} onChange={handleInput} /></div>
-              <div className="input-field"><label>{t.rainfall}</label><input type="number" name="rainfall" value={inputs.rainfall} onChange={handleInput} /></div>
+              <div className="input-field"><label>{t.temp || "Temperature"}</label><input type="number" name="temp" value={inputs.temp} onChange={handleInput} /></div>
+              <div className="input-field"><label>{t.rainfall || "Rainfall"}</label><input type="number" name="rainfall" value={inputs.rainfall} onChange={handleInput} /></div>
               <button className="btn btn-secondary" onClick={detectLocation} style={{ marginTop: '1rem' }}>
                 <Navigation size={18} /> {isAutoLoading ? t.fetching : t.detectLoc}
               </button>
@@ -592,16 +607,16 @@ function App() {
           </section>
 
           <section className="clean-card">
-            <h3 className="section-title"><MapPin size={24} /> {t.market}</h3>
+            <h3 className="section-title"><MapPin size={24} /> {t.market || "Market"}</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <div className="input-field"><label>{t.region}</label><select name="region" value={inputs.region} onChange={handleInput}>{regionsList.map(r => <option key={r} value={r}>{getLocLabel(r)}</option>)}</select></div>
+              <div className="input-field"><label>{t.region || "Region"}</label><select name="region" value={inputs.region} onChange={handleInput}>{regionsList.map(r => <option key={r} value={r}>{getLocLabel(r)}</option>)}</select></div>
               {inputs.region === "Maharashtra" && (
                 <>
-                  <div className="input-field"><label>{t.district}</label><select name="district" value={inputs.district} onChange={handleInput}>{distList.map(d => <option key={d} value={d}>{getLocLabel(d)}</option>)}</select></div>
-                  <div className="input-field"><label>{t.taluka}</label><select name="taluka" value={inputs.taluka} onChange={handleInput}>{talukaList[inputs.district]?.map(tal => <option key={tal} value={tal}>{getLocLabel(tal)}</option>)}</select></div>
+                  <div className="input-field"><label>{t.district || "District"}</label><select name="district" value={inputs.district} onChange={handleInput}>{distList.map(d => <option key={d} value={d}>{getLocLabel(d)}</option>)}</select></div>
+                  <div className="input-field"><label>{t.taluka || "Taluka"}</label><select name="taluka" value={inputs.taluka} onChange={handleInput}>{talukaList[inputs.district]?.map(tal => <option key={tal} value={tal}>{getLocLabel(tal)}</option>)}</select></div>
                 </>
               )}
-              <div className="input-field"><label>{t.selectSeason}</label><select name="season" value={inputs.season} onChange={handleInput}><option value="Kharif">{t.kharif}</option><option value="Rabbi">{t.rabbi}</option></select></div>
+              <div className="input-field"><label>{t.selectSeason || "Season"}</label><select name="season" value={inputs.season} onChange={handleInput}><option value="Kharif">{t.kharif || "Kharif"}</option><option value="Rabbi">{t.rabbi || "Rabbi"}</option></select></div>
             </div>
           </section>
         </div>
