@@ -18,6 +18,12 @@ async function extractDataWithLLM(userMessage) {
         Return ONLY a valid JSON object with the exact keys: "pincode", "soil_type", "water_source", "season".
         If a detail is missing or unclear, set its value to "unknown".
         
+        CRITICAL: Normalize the extracted values EXACTLY to these expected strings (do not translate to English):
+        - "soil_type": "Kali", "Lal", or "Retili"
+        - "season": "Kharif" or "Rabi"
+        - "water_source": "Barish" or "Kuwa"
+        - "pincode": 6-digit number only
+        
         User message: "${userMessage}"
         `;
 
