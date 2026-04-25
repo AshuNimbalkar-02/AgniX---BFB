@@ -7,6 +7,15 @@ import startWhatsAppBot from './whatsappBot.js';
 
 dotenv.config();
 
+console.log("--- BACKEND DEBUG ---");
+console.log("Current Directory:", process.cwd());
+if (process.env.GEMINI_API_KEY) {
+  console.log(`API Key Found! Starts with: ${process.env.GEMINI_API_KEY.substring(0, 7)}...`);
+} else {
+  console.error("CRITICAL: GEMINI_API_KEY is NOT found in process.env");
+}
+console.log("----------------------");
+
 const genAI = new GoogleGenerativeAI((process.env.GEMINI_API_KEY || "").trim());
 
 const SYSTEM_PROMPT = `You are the AgniX AI Farming Assistant. Your primary goal is to help farmers in Maharashtra, India.
@@ -20,10 +29,19 @@ CONTEXT:
 - Focus: Practical farming advice for Maharashtra's climate.
 - Tone: Helpful, polite, and professional.`;
 
-const model = genAI.getGenerativeModel({ 
-  model: "gemini-1.5-flash",
-  systemInstruction: SYSTEM_PROMPT 
-});
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+// DIAGNOSTIC: List available models on startup
+(async () => {
+  try {
+    const result = await genAI.listModels();
+    console.log("--- AVAILABLE MODELS FOR YOUR KEY ---");
+    result.models.forEach(m => console.log(`- ${m.name}`));
+    console.log("-------------------------------------");
+  } catch (e) {
+    console.error("DIAGNOSTIC ERROR: Could not list models. This usually means your API KEY is invalid or doesn't have Gemini API enabled.");
+  }
+})();
 
 const app = express();
 app.use(cors());
@@ -49,18 +67,22 @@ app.post('/api/recommend', (req, res) => {
 app.post('/api/chat', async (req, res) => {
   try {
     const { message, history } = req.body;
-    const apiKey = process.env.GEMINI_API_KEY;
+    const apiKey = (process.env.GEMINI_API_KEY || "").trim();
 
     if (!apiKey || !apiKey.startsWith('AIza')) {
-      console.error("Chat Error: Invalid or Missing Gemini API Key. Keys must start with 'AIza'.");
       return res.status(500).json({ 
         error: 'Invalid API Configuration', 
-        details: 'Please use a valid Gemini API key starting with AIza in your backend/.env file.' 
+        details: 'API Key is missing or invalid. Check your backend/.env file.' 
       });
     }
 
-    const chat = model.startChat({
-      history: history || [],
+    const currentModel = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const chat = currentModel.startChat({
+      history: [
+        { role: "user", parts: [{ text: SYSTEM_PROMPT }] },
+        { role: "model", parts: [{ text: "हो, मी अ‍ॅग्निक्स आय सहाय्यक आहे. मी तुम्हाला कशी मदत करू शकतो?" }] },
+        ...(history || [])
+      ],
     });
 
     const result = await chat.sendMessage(message);
