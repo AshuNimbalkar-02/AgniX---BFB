@@ -25,3 +25,4 @@ dist-ssr
 .wwebjs_auth/
 backend/.wwebjs_auth/
 .env
+.env.example

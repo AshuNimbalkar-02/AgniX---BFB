@@ -11,6 +11,7 @@ import Header from './components/Header';
 import InputForm from './components/InputForm';
 import Results from './components/Results';
 import Footer from './components/Footer';
+import ChatBot from './components/ChatBot';
 
 function App() {
   const [lang, setLang] = useState('en');
@@ -292,6 +293,7 @@ function App() {
       </AnimatePresence>
 
       <Footer />
+      <ChatBot t={t} lang={lang} />
     </div>
   );
 }
